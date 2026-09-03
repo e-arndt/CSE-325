@@ -1,0 +1,14 @@
+D:\Documents\BYUi\Classes\CSE-325\W01-DotNetDebugging\bin\Release\net10.0\W01-DotNetDebugging.exe
+D:\Documents\BYUi\Classes\CSE-325\W01-DotNetDebugging\bin\Release\net10.0\W01-DotNetDebugging.deps.json
+D:\Documents\BYUi\Classes\CSE-325\W01-DotNetDebugging\bin\Release\net10.0\W01-DotNetDebugging.runtimeconfig.json
+D:\Documents\BYUi\Classes\CSE-325\W01-DotNetDebugging\bin\Release\net10.0\W01-DotNetDebugging.dll
+D:\Documents\BYUi\Classes\CSE-325\W01-DotNetDebugging\bin\Release\net10.0\W01-DotNetDebugging.pdb
+D:\Documents\BYUi\Classes\CSE-325\W01-DotNetDebugging\obj\Release\net10.0\W01-DotNetDebugging.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\BYUi\Classes\CSE-325\W01-DotNetDebugging\obj\Release\net10.0\W01-DotNetDebugging.AssemblyInfoInputs.cache
+D:\Documents\BYUi\Classes\CSE-325\W01-DotNetDebugging\obj\Release\net10.0\W01-DotNetDebugging.AssemblyInfo.cs
+D:\Documents\BYUi\Classes\CSE-325\W01-DotNetDebugging\obj\Release\net10.0\W01-DotNetDebugging.csproj.CoreCompileInputs.cache
+D:\Documents\BYUi\Classes\CSE-325\W01-DotNetDebugging\obj\Release\net10.0\W01-DotNetDebugging.dll
+D:\Documents\BYUi\Classes\CSE-325\W01-DotNetDebugging\obj\Release\net10.0\refint\W01-DotNetDebugging.dll
+D:\Documents\BYUi\Classes\CSE-325\W01-DotNetDebugging\obj\Release\net10.0\W01-DotNetDebugging.pdb
+D:\Documents\BYUi\Classes\CSE-325\W01-DotNetDebugging\obj\Release\net10.0\W01-DotNetDebugging.genruntimeconfig.cache
+D:\Documents\BYUi\Classes\CSE-325\W01-DotNetDebugging\obj\Release\net10.0\ref\W01-DotNetDebugging.dll

@@ -1,0 +1,106 @@
+W01 Submission Notes
+
+PART 1 - Web API Evidence
+
+GET {{ContosoPizza_HostAddress}}/pizza/
+Accept: application/json
+
+###
+
+
+POST {{ContosoPizza_HostAddress}}/pizza
+Content-Type: application/json
+
+{
+    "name": "Pepperoni",
+    "isGlutenFree": false
+}
+
+###
+
+
+
+Content-Type: application/json; charset=utf-8
+Date: Thu, 03 Sep 2026 10:27:29 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+[
+  {
+    "id": 1,
+    "name": "Classic Italian",
+    "isGlutenFree": false
+  },
+  {
+    "id": 2,
+    "name": "Veggie",
+    "isGlutenFree": true
+  },
+  {
+    "id": 3,
+    "name": "Pepperoni",
+    "isGlutenFree": false
+  }
+]
+
+
+
+
+PART 2 - Sales Summary Function
+
+
+// Generates a report containing the grand total
+// and the individual total from each sales file.
+void GenerateSalesSummary(
+    IEnumerable<string> salesFiles,
+    string storesDirectory,
+    string outputFile)
+{
+    // StringBuilder builds the report in memory.
+    StringBuilder report = new StringBuilder();
+
+    double grandTotal = 0;
+
+    report.AppendLine("Sales Summary");
+    report.AppendLine("----------------------------");
+
+    // Store the detail lines temporarily so the grand total
+    // can appear before the Details section.
+    StringBuilder details = new StringBuilder();
+
+    foreach (var file in salesFiles)
+    {
+        // Read the contents of the current JSON file.
+        string salesJson = File.ReadAllText(file);
+
+        // Deserialize the JSON into a SalesData object.
+        SalesData? data =
+            JsonConvert.DeserializeObject<SalesData?>(salesJson);
+
+        // Use 0 if the file did not contain valid sales data.
+        double fileTotal = data?.Total ?? 0;
+
+        // Add this file's amount to the grand total.
+        grandTotal += fileTotal;
+
+        // Use a relative path so files with the same name
+        // can still be distinguished by their store directory.
+        string fileName =
+            Path.GetRelativePath(storesDirectory, file);
+
+        // Add this file and its formatted total to the Details section.
+        details.AppendLine(
+            $"  {fileName}: {fileTotal:C}");
+    }
+
+    // Add the grand total using currency formatting.
+    report.AppendLine($" Total Sales: {grandTotal:C}");
+    report.AppendLine();
+    report.AppendLine(" Details:");
+
+    // Add all of the individual file detail lines.
+    report.Append(details);
+
+    // Write the completed report to the output file.
+    File.WriteAllText(outputFile, report.ToString());
+}
