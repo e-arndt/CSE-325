@@ -484,3 +484,6 @@ $RECYCLE.BIN/
 *.db
 *.db-shm
 *.db-wal
+
+# CSE-325 local course documentation
+DOCS/
